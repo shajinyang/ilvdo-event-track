@@ -1,0 +1,58 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies {
+    compile gradleApi() //gradle sdk
+    compile localGroovy() //groovy sdk
+    compile 'com.android.tools.build:gradle:3.2.1'
+    compile 'org.aspectj:aspectjtools:1.8.6'
+    compile 'org.aspectj:aspectjrt:1.8.6'
+}
+
+repositories {
+    jcenter()
+    google()
+    mavenLocal()
+}
+
+//发布到本地仓库配置
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: uri('../repo')) //仓库的路径，此处是项目根目录下的 repo 的文件夹
+        pom.groupId = 'com.ilvdo.asplugin'  //groupId ，自行定义，一般是包名
+        pom.artifactId = 'ilvoasplugin' //artifactId ，自行定义
+        pom.version = '1.0.0' //version 版本号
+    }
+}
+//发布到本地仓库配置
+
+
+
+//发布到远程仓库配置
+//apply plugin: "com.gradle.plugin-publish"
+//buildscript {
+//    repositories {
+//        maven {
+//            url "https://plugins.gradle.org/m2/"
+//        }
+//    }
+//    dependencies {
+//        classpath "com.gradle.publish:plugin-publish-plugin:0.10.0"
+//    }
+//}
+//version = "1.1.1"    //配置插件的版本号
+////group = "com.ilvdo.asplugin.AspectPlugin"   //插件的群组，插件的classpath会用到
+//pluginBundle {
+//    website = 'https://github.com/'
+//    vcsUrl = 'https://github.com/shajinyang'
+//    description = 'asplugin'  //插件描述
+//    tags = ['asplugin']  //插件的tag。可以通过这个在插件门户上搜索
+//    plugins {
+//        greetingsPlugin {
+//            id = 'com.ilvdo.asplugin'   //插件的id，到时候apply的插件id
+//            displayName = 'auto config  aspectJ  libs  instead of do a lot of opreators '
+//        }
+//    }
+//}
+//发布到远程仓库配置
+

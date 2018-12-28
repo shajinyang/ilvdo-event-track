@@ -2,7 +2,19 @@
 
 buildscript {
     ext.kotlin_version = '1.2.71'
+    ext.aspectX='2.0.4'
+
+    //友盟统计
+    ext.umanalytics='7.5.4'
+    ext.umcommon='1.5.4'
+
     repositories {
+//        maven {
+//            url uri('repo')
+//        }
+        maven{
+            url ('https://dl.bintray.com/umsdk/release' )
+        }
         google()
         jcenter()
     }
@@ -10,15 +22,23 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        //自己配置aspectJ ,但是不支持kotlin
+        //classpath 'org.aspectj:aspectjtools:1.8.6'
+        //classpath 'com.ilvdo.asplugin:ilvoasplugin:1.0.0'
+
+
+        classpath "com.hujiang.aspectjx:gradle-android-plugin-aspectjx:$aspectX"
     }
 }
+
 
 allprojects {
     repositories {
         google()
         jcenter()
+        maven{
+            url ('https://dl.bintray.com/umsdk/release' )
+        }
     }
 }
 
