@@ -1,1 +1,1 @@
-include ':app', ':event_track_lib', ':plugin_lib'
+include ':app', ':event_track_api', ':plugin_lib', ':event_track_compier', ':event_track_annotation'

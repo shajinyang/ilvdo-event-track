@@ -1,0 +1,9 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':event_track_annotation')
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
