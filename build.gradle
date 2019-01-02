@@ -8,6 +8,8 @@ buildscript {
     ext.umanalytics='7.5.4'
     ext.umcommon='1.5.4'
 
+    //fastjson
+    ext.fastjson_version='1.1.68.android'
     repositories {
 //        maven {
 //            url uri('repo')

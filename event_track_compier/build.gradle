@@ -3,6 +3,10 @@ apply plugin: 'java-library'
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':event_track_annotation')
+    implementation 'com.google.auto.service:auto-service:1.0-rc2'
+    implementation 'com.squareup:javapoet:1.9.0'
+    //fastjson
+    implementation "com.alibaba:fastjson:$fastjson_version"
 }
 
 sourceCompatibility = "7"

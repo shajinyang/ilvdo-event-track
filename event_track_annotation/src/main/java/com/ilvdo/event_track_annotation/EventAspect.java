@@ -15,5 +15,5 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target({ElementType.METHOD})
 public @interface EventAspect {
     //切点标识id
-    int id();
+    String pathId();
 }

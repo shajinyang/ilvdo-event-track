@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  * Describe 注解容器，解决java7 的多重注解的问题
  */
 @Target(ElementType.TYPE)
-@Retention(RetentionPolicy.RUNTIME)
+@Retention(RetentionPolicy.CLASS)
 public @interface Events {
     Path[] value();
 }

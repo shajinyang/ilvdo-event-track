@@ -11,14 +11,14 @@ import com.ilvdo.event_track_annotation.EventAspect;
 public class LoginActivity extends Activity {
 
     @Override
-    @EventAspect(id=5)
+    @EventAspect(pathId ="12")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         test();
     }
 
-    @EventAspect(id=1)
+    @EventAspect(pathId = "123")
     public void  test(){
 
     }
