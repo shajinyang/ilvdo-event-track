@@ -47,7 +47,7 @@
  IlvdoEventTrack
                 .init()
                 .withApplicatiuon(this)
-                .withAppkey("54f6667efd98c53466000db0") //umeng  申请的appkey
+                .withAppkey("00000006000db0") //umeng  申请的appkey
                 .withChannel("UMENG_CHANNEL_VALUE")  // 对应 umeng的channel
                 .config();
 ```
